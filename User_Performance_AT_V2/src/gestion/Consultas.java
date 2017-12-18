@@ -40,8 +40,8 @@ public class Consultas {
 
         objCon.conectar();
 
-        sql = "select id,email, created_at, token_email from db_apuestatotal_prod.user_user where token_email is not null and  created_at>='2017-09-01'"
-                + " limit 100";
+        sql = "select id,email, created_at, token_email from db_apuestatotal_prod.user_user where token_email is not null and  created_at>='2017-08-15'"
+                + " limit 600";
 
         PreparedStatement stm = objCon.getCon().prepareStatement(sql);
         ResultSet rs = stm.executeQuery();
