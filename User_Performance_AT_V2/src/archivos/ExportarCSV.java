@@ -107,9 +107,25 @@ public class ExportarCSV {
             csvOutput.write(apostadores[i].getMonto_retiro()[j]+"");
                 
             
-            csvOutput.write(apostadores[i].getContApuesta()+"");
-            csvOutput.write(apostadores[i].getContRecarga()+"");
-            csvOutput.write(apostadores[i].getContRetiro()+"");
+                    if ((apostadores[i].getFecha_apuesta()[j]).equalsIgnoreCase("")) {
+                     csvOutput.write("0");   
+                    }else{
+                        csvOutput.write("1"); 
+                    }
+            
+            if ((apostadores[i].getFecha_recarga()[j]).equalsIgnoreCase("")) {
+                     csvOutput.write("0");   
+                    }else{
+                        csvOutput.write("1"); 
+                    }
+                    
+            if ((apostadores[i].getFecha_retiro()[j]).equalsIgnoreCase("")) {
+                     csvOutput.write("0");   
+                    }else{
+                        csvOutput.write("1"); 
+                    }
+            
+            
             
             csvOutput.endRecord();
                     
